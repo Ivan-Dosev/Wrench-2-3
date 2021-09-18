@@ -3,16 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CE1C2813D5C21FF9AF69F98 /* Pods_Bert_BertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6084E40E2B40423DFBD0C /* Pods_Bert_BertUITests.framework */; };
+		C1AABF14516A109A6C44F0E9 /* Pods_Bert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759AA7F3EBF9AF888CD29C20 /* Pods_Bert.framework */; };
 		CC48B21A26B427F7009A607C /* BertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B21926B427F7009A607C /* BertApp.swift */; };
 		CC48B21C26B427F7009A607C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B21B26B427F7009A607C /* ContentView.swift */; };
 		CC48B21E26B427FA009A607C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC48B21D26B427FA009A607C /* Assets.xcassets */; };
 		CC48B22126B427FA009A607C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC48B22026B427FA009A607C /* Preview Assets.xcassets */; };
 		CC48B22C26B427FA009A607C /* BertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B22B26B427FA009A607C /* BertTests.swift */; };
 		CC48B23726B427FA009A607C /* BertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B23626B427FA009A607C /* BertUITests.swift */; };
+		CC48B26026B43222009A607C /* ContractCompoents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B25F26B43222009A607C /* ContractCompoents.swift */; };
+		CC48B26A26B469EF009A607C /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC48B26926B469EF009A607C /* PromiseKit */; };
+		CC48B38026B5F6CA009A607C /* ProjectContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B37F26B5F6CA009A607C /* ProjectContract.swift */; };
+		CC48B38526B5F6E6009A607C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B38426B5F6E6009A607C /* Wallet.swift */; };
+		CC48B38A26B5F6F7009A607C /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B38926B5F6F7009A607C /* Networks.swift */; };
+		CC48B38F26B5F700009A607C /* ContractHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B38E26B5F700009A607C /* ContractHelpers.swift */; };
+		CC898EC826B84ABA003D36AA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC898EC726B84ABA003D36AA /* CryptoSwift */; };
+		CC8E59AC26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
+		CC8E59AD26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
+		CC8E59AE26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
+		CC8E59AF26F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
+		CC8E59B026F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
+		CC8E59B126F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
+		CC8E59B226F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
+		CC8E59B326F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
+		CC8E59B426F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
+		CC8E59B626F305D6006E6C5D /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E59B526F305D6006E6C5D /* FirebaseView.swift */; };
+		CCB3C26D26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C26C26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta */; };
+		CCB3C26F26EEF69C0055F010 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C26E26EEF69C0055F010 /* FirebaseStorage */; };
+		CCB3C27126EEF69C0055F010 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C27026EEF69C0055F010 /* FirebaseAuth */; };
+		CCB3C27326EEF69C0055F010 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C27226EEF69C0055F010 /* FirebaseFirestore */; };
+		CCB3C27526EEF69C0055F010 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C27426EEF69C0055F010 /* FirebaseStorageSwift-Beta */; };
+		CCB3C27726EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
+		CCB3C27826EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
+		CCB3C27926EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
+		CCB3C27B26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
+		CCB3C27C26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
+		CCB3C27D26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
+		CCB3C28026EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
+		CCB3C28126EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
+		CCB3C28226EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
+		CCB3C28426EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
+		CCB3C28526EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
+		CCB3C28626EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
+		CCB3C28826EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
+		CCB3C28926EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
+		CCB3C28A26EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
+		CCB3C28C26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
+		CCB3C28D26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
+		CCB3C28E26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
+		CCB3C29026EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
+		CCB3C29126EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
+		CCB3C29226EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
+		E59BBBC025FC51AF3CF60EE8 /* Pods_BertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2ADF89C56488772F315D8 /* Pods_BertTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +79,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23D3FE6A45EE9262C1EB7E80 /* Pods-Bert-BertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert-BertUITests.release.xcconfig"; path = "Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests.release.xcconfig"; sourceTree = "<group>"; };
+		29E2ADF89C56488772F315D8 /* Pods_BertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5BF33648340F7E1F3A46F6 /* Pods-BertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertTests.debug.xcconfig"; path = "Target Support Files/Pods-BertTests/Pods-BertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		759AA7F3EBF9AF888CD29C20 /* Pods_Bert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F6AFC7739A9C462EE7AE9B /* Pods-Bert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert.release.xcconfig"; path = "Target Support Files/Pods-Bert/Pods-Bert.release.xcconfig"; sourceTree = "<group>"; };
+		825B3CE2EA06DCFF7CB9738A /* Pods-Bert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert.debug.xcconfig"; path = "Target Support Files/Pods-Bert/Pods-Bert.debug.xcconfig"; sourceTree = "<group>"; };
+		83EF9095FF8891FBB7022132 /* Pods-BertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertTests.release.xcconfig"; path = "Target Support Files/Pods-BertTests/Pods-BertTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC48B21626B427F7009A607C /* Bert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC48B21926B427F7009A607C /* BertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BertApp.swift; sourceTree = "<group>"; };
 		CC48B21B26B427F7009A607C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +98,24 @@
 		CC48B23226B427FA009A607C /* BertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC48B23626B427FA009A607C /* BertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BertUITests.swift; sourceTree = "<group>"; };
 		CC48B23826B427FA009A607C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC48B25F26B43222009A607C /* ContractCompoents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractCompoents.swift; sourceTree = "<group>"; };
+		CC48B37F26B5F6CA009A607C /* ProjectContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectContract.swift; sourceTree = "<group>"; };
+		CC48B38426B5F6E6009A607C /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		CC48B38926B5F6F7009A607C /* Networks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networks.swift; sourceTree = "<group>"; };
+		CC48B38E26B5F700009A607C /* ContractHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractHelpers.swift; sourceTree = "<group>"; };
+		CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Azithromycin.pdf; path = ../../../../../qr/Azithromycin.pdf; sourceTree = "<group>"; };
+		CC8E59AA26F0263B006E6C5D /* nebilet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = nebilet.pdf; sourceTree = "<group>"; };
+		CC8E59AB26F0263B006E6C5D /* famotidine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = famotidine.pdf; sourceTree = "<group>"; };
+		CC8E59B526F305D6006E6C5D /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
+		CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CCB3C27A26EF026A0055F010 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CCB3C27F26EF09B70055F010 /* QRV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QRV.pdf; sourceTree = "<group>"; };
+		CCB3C28326EF09CB0055F010 /* PdfColor.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PdfColor.pdf; sourceTree = "<group>"; };
+		CCB3C28726EF09DF0055F010 /* QQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQ.swift; sourceTree = "<group>"; };
+		CCB3C28B26EF09EB0055F010 /* PdfKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfKit.swift; sourceTree = "<group>"; };
+		CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumMedic.swift; sourceTree = "<group>"; };
+		EBB6084E40E2B40423DFBD0C /* Pods_Bert_BertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bert_BertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25AF1F9F11957834FDA95AD /* Pods-Bert-BertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert-BertUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +123,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1AABF14516A109A6C44F0E9 /* Pods_Bert.framework in Frameworks */,
+				CCB3C27126EEF69C0055F010 /* FirebaseAuth in Frameworks */,
+				CCB3C26D26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				CC48B26A26B469EF009A607C /* PromiseKit in Frameworks */,
+				CCB3C26F26EEF69C0055F010 /* FirebaseStorage in Frameworks */,
+				CCB3C27526EEF69C0055F010 /* FirebaseStorageSwift-Beta in Frameworks */,
+				CC898EC826B84ABA003D36AA /* CryptoSwift in Frameworks */,
+				CCB3C27326EEF69C0055F010 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59BBBC025FC51AF3CF60EE8 /* Pods_BertTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +146,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE1C2813D5C21FF9AF69F98 /* Pods_Bert_BertUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36579FE4505ECC04C1E77BC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				825B3CE2EA06DCFF7CB9738A /* Pods-Bert.debug.xcconfig */,
+				80F6AFC7739A9C462EE7AE9B /* Pods-Bert.release.xcconfig */,
+				F25AF1F9F11957834FDA95AD /* Pods-Bert-BertUITests.debug.xcconfig */,
+				23D3FE6A45EE9262C1EB7E80 /* Pods-Bert-BertUITests.release.xcconfig */,
+				5B5BF33648340F7E1F3A46F6 /* Pods-BertTests.debug.xcconfig */,
+				83EF9095FF8891FBB7022132 /* Pods-BertTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A21359F9FD558EBD4971CDF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				759AA7F3EBF9AF888CD29C20 /* Pods_Bert.framework */,
+				EBB6084E40E2B40423DFBD0C /* Pods_Bert_BertUITests.framework */,
+				29E2ADF89C56488772F315D8 /* Pods_BertTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC48B20D26B427F7009A607C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +183,8 @@
 				CC48B22A26B427FA009A607C /* BertTests */,
 				CC48B23526B427FA009A607C /* BertUITests */,
 				CC48B21726B427F7009A607C /* Products */,
+				36579FE4505ECC04C1E77BC3 /* Pods */,
+				A21359F9FD558EBD4971CDF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,9 +202,18 @@
 			isa = PBXGroup;
 			children = (
 				CC48B21926B427F7009A607C /* BertApp.swift */,
+				CC48B25F26B43222009A607C /* ContractCompoents.swift */,
+				CC48B37F26B5F6CA009A607C /* ProjectContract.swift */,
+				CC48B38426B5F6E6009A607C /* Wallet.swift */,
+				CC48B38926B5F6F7009A607C /* Networks.swift */,
+				CC48B38E26B5F700009A607C /* ContractHelpers.swift */,
 				CC48B21B26B427F7009A607C /* ContentView.swift */,
+				CCB3C27A26EF026A0055F010 /* Book.swift */,
+				CCB3C27F26EF09B70055F010 /* QRV.pdf */,
+				CCB3C27E26EF099A0055F010 /* Dossi */,
 				CC48B21D26B427FA009A607C /* Assets.xcassets */,
 				CC48B22226B427FA009A607C /* Info.plist */,
+				CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */,
 				CC48B21F26B427FA009A607C /* Preview Content */,
 			);
 			path = Bert;
@@ -130,6 +245,29 @@
 			path = BertUITests;
 			sourceTree = "<group>";
 		};
+		CC8E59A726F0245B006E6C5D /* PDFfiles */ = {
+			isa = PBXGroup;
+			children = (
+				CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */,
+				CC8E59AB26F0263B006E6C5D /* famotidine.pdf */,
+				CC8E59AA26F0263B006E6C5D /* nebilet.pdf */,
+				CCB3C28326EF09CB0055F010 /* PdfColor.pdf */,
+			);
+			path = PDFfiles;
+			sourceTree = "<group>";
+		};
+		CCB3C27E26EF099A0055F010 /* Dossi */ = {
+			isa = PBXGroup;
+			children = (
+				CCB3C28B26EF09EB0055F010 /* PdfKit.swift */,
+				CC8E59B526F305D6006E6C5D /* FirebaseView.swift */,
+				CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */,
+				CCB3C28726EF09DF0055F010 /* QQ.swift */,
+				CC8E59A726F0245B006E6C5D /* PDFfiles */,
+			);
+			path = Dossi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,15 +275,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC48B23B26B427FA009A607C /* Build configuration list for PBXNativeTarget "Bert" */;
 			buildPhases = (
+				7D73DE83CFB59711073909F5 /* [CP] Check Pods Manifest.lock */,
 				CC48B21226B427F7009A607C /* Sources */,
 				CC48B21326B427F7009A607C /* Frameworks */,
 				CC48B21426B427F7009A607C /* Resources */,
+				F9956B9BFFBE7EF2EA2034E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Bert;
+			packageProductDependencies = (
+				CC48B26926B469EF009A607C /* PromiseKit */,
+				CC898EC726B84ABA003D36AA /* CryptoSwift */,
+				CCB3C26C26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta */,
+				CCB3C26E26EEF69C0055F010 /* FirebaseStorage */,
+				CCB3C27026EEF69C0055F010 /* FirebaseAuth */,
+				CCB3C27226EEF69C0055F010 /* FirebaseFirestore */,
+				CCB3C27426EEF69C0055F010 /* FirebaseStorageSwift-Beta */,
+			);
 			productName = Bert;
 			productReference = CC48B21626B427F7009A607C /* Bert.app */;
 			productType = "com.apple.product-type.application";
@@ -154,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC48B23E26B427FA009A607C /* Build configuration list for PBXNativeTarget "BertTests" */;
 			buildPhases = (
+				949570B1649DEDAF2BCBB2CF /* [CP] Check Pods Manifest.lock */,
 				CC48B22326B427FA009A607C /* Sources */,
 				CC48B22426B427FA009A607C /* Frameworks */,
 				CC48B22526B427FA009A607C /* Resources */,
+				4F3E0423542FE1B4D2B5EECE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC48B24126B427FA009A607C /* Build configuration list for PBXNativeTarget "BertUITests" */;
 			buildPhases = (
+				ECBCBA93784E889E19C283D2 /* [CP] Check Pods Manifest.lock */,
 				CC48B22E26B427FA009A607C /* Sources */,
 				CC48B22F26B427FA009A607C /* Frameworks */,
 				CC48B23026B427FA009A607C /* Resources */,
+				F67E87699EB8248142A4719F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +370,11 @@
 				Base,
 			);
 			mainGroup = CC48B20D26B427F7009A607C;
+			packageReferences = (
+				CC48B26826B469EF009A607C /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				CC898EC626B84ABA003D36AA /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CC48B21726B427F7009A607C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +391,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB3C28026EF09B70055F010 /* QRV.pdf in Resources */,
 				CC48B22126B427FA009A607C /* Preview Assets.xcassets in Resources */,
+				CCB3C28426EF09CB0055F010 /* PdfColor.pdf in Resources */,
+				CC8E59AC26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
+				CCB3C27726EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
+				CC8E59AF26F0263B006E6C5D /* nebilet.pdf in Resources */,
+				CC8E59B226F0263B006E6C5D /* famotidine.pdf in Resources */,
 				CC48B21E26B427FA009A607C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +406,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8E59B026F0263B006E6C5D /* nebilet.pdf in Resources */,
+				CCB3C28126EF09B70055F010 /* QRV.pdf in Resources */,
+				CC8E59AD26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
+				CCB3C28526EF09CB0055F010 /* PdfColor.pdf in Resources */,
+				CC8E59B326F0263B006E6C5D /* famotidine.pdf in Resources */,
+				CCB3C27826EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,17 +419,153 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8E59B126F0263B006E6C5D /* nebilet.pdf in Resources */,
+				CCB3C28226EF09B70055F010 /* QRV.pdf in Resources */,
+				CC8E59AE26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
+				CCB3C28626EF09CB0055F010 /* PdfColor.pdf in Resources */,
+				CC8E59B426F0263B006E6C5D /* famotidine.pdf in Resources */,
+				CCB3C27926EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F3E0423542FE1B4D2B5EECE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BertTests/Pods-BertTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BertTests/Pods-BertTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BertTests/Pods-BertTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D73DE83CFB59711073909F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949570B1649DEDAF2BCBB2CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BertTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECBCBA93784E889E19C283D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bert-BertUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F67E87699EB8248142A4719F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9956B9BFFBE7EF2EA2034E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bert/Pods-Bert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bert/Pods-Bert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bert/Pods-Bert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC48B21226B427F7009A607C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB3C27B26EF026A0055F010 /* Book.swift in Sources */,
+				CC48B38526B5F6E6009A607C /* Wallet.swift in Sources */,
+				CCB3C29026EF0A3A0055F010 /* EnumMedic.swift in Sources */,
+				CCB3C28826EF09DF0055F010 /* QQ.swift in Sources */,
+				CC48B38F26B5F700009A607C /* ContractHelpers.swift in Sources */,
+				CC8E59B626F305D6006E6C5D /* FirebaseView.swift in Sources */,
 				CC48B21C26B427F7009A607C /* ContentView.swift in Sources */,
+				CC48B38026B5F6CA009A607C /* ProjectContract.swift in Sources */,
+				CC48B26026B43222009A607C /* ContractCompoents.swift in Sources */,
+				CCB3C28C26EF09EB0055F010 /* PdfKit.swift in Sources */,
+				CC48B38A26B5F6F7009A607C /* Networks.swift in Sources */,
 				CC48B21A26B427F7009A607C /* BertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +574,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB3C27C26EF026A0055F010 /* Book.swift in Sources */,
+				CCB3C28D26EF09EB0055F010 /* PdfKit.swift in Sources */,
 				CC48B22C26B427FA009A607C /* BertTests.swift in Sources */,
+				CCB3C29126EF0A3A0055F010 /* EnumMedic.swift in Sources */,
+				CCB3C28926EF09DF0055F010 /* QQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +586,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB3C27D26EF026A0055F010 /* Book.swift in Sources */,
+				CCB3C28E26EF09EB0055F010 /* PdfKit.swift in Sources */,
 				CC48B23726B427FA009A607C /* BertUITests.swift in Sources */,
+				CCB3C29226EF0A3A0055F010 /* EnumMedic.swift in Sources */,
+				CCB3C28A26EF09DF0055F010 /* QQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +728,7 @@
 		};
 		CC48B23C26B427FA009A607C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825B3CE2EA06DCFF7CB9738A /* Pods-Bert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +751,7 @@
 		};
 		CC48B23D26B427FA009A607C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F6AFC7739A9C462EE7AE9B /* Pods-Bert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +774,7 @@
 		};
 		CC48B23F26B427FA009A607C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5BF33648340F7E1F3A46F6 /* Pods-BertTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +797,7 @@
 		};
 		CC48B24026B427FA009A607C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EF9095FF8891FBB7022132 /* Pods-BertTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +820,7 @@
 		};
 		CC48B24226B427FA009A607C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25AF1F9F11957834FDA95AD /* Pods-Bert-BertUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +841,7 @@
 		};
 		CC48B24326B427FA009A607C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23D3FE6A45EE9262C1EB7E80 /* Pods-Bert-BertUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +900,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC48B26826B469EF009A607C /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.15.3;
+			};
+		};
+		CC898EC626B84ABA003D36AA /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC48B26926B469EF009A607C /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC48B26826B469EF009A607C /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		CC898EC726B84ABA003D36AA /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC898EC626B84ABA003D36AA /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		CCB3C26C26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		CCB3C26E26EEF69C0055F010 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CCB3C27026EEF69C0055F010 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CCB3C27226EEF69C0055F010 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CCB3C27426EEF69C0055F010 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB3C26B26EEF69C0055F010 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC48B20E26B427F7009A607C /* Project object */;
 }
