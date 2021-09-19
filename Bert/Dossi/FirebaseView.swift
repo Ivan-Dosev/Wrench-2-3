@@ -10,6 +10,7 @@ import FirebaseStorage
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorageSwift
+import Combine
 
 struct Country: Identifiable,Codable {
  @DocumentID   var id        : String? = UUID().uuidString
@@ -24,6 +25,7 @@ class CountryRepository: ObservableObject {
     @Published var models = [Country]()
     
     let db = Firestore.firestore()
+    let cancelBag = Set<AnyCancellable>()
     
     func loadCountry(company: String, medicine: String) {
         if company != "" && medicine != "" {
@@ -48,5 +50,16 @@ class CountryRepository: ObservableObject {
 
         return url
     }
+    
+    func loadFile(reference: String, fileURL : URL)  {
+        
+        let progress : PassthroughSubject<(id: Int, progress: Progress), Never> = .init()
+        let reference = Storage.storage().reference(forURL: reference)
+    }
+    
+    enum upLoad{
+        case progress(procentage: Double)
+    }
+    
 }
 

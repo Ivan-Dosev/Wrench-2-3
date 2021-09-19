@@ -54,9 +54,9 @@ struct ContentView: View {
                     self.company = elements[0]
                     self.medicine = elements[1]
                 }
-            Text("company...\(self.company)")
+            Text("company...\(self.medicine)")
                 .foregroundColor(.clear)
-                .onChange(of: company) { _ in
+                .onChange(of: medicine) { _ in
                     self.models.loadCountry(company: self.company, medicine: self.medicine)
                 }
                 .foregroundColor(.red)
@@ -156,8 +156,7 @@ struct ContentView: View {
                         }
                     }
                     if onSelect {
-                        ProgressView()
-                            .scaleEffect(5)
+                        ShadowedProgressViews()
                     }
                 }
 //  MARK: - Scanar
