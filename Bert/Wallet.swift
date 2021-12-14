@@ -5,10 +5,10 @@
 //  Created by Mitchell Tucker on 5/14/21.
 //
 
-import UIKit
+
+import Foundation
 import web3swift
 import PromiseKit
-
 
 struct Wallet {
     let address: String

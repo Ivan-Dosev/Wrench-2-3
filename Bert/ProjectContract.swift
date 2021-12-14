@@ -31,7 +31,7 @@ public class ProjectContract{
         // ropsten should look very similar to rinkeby
         if network == .rinkeby{
             endpoint = URL(string:"https://rinkeby.infura.io/v3/a146daf63d93490995823f0910f50118")!
-            ethContractAddress = EthereumAddress("0x12cAf8a83ab8748D2a307D0de71BbD45a0461440", ignoreChecksum: true)!
+            ethContractAddress = EthereumAddress("0x550434D6bd42CAfF4F4c6A6Cbe4e6bA5C65D4D86", ignoreChecksum: true)!
             socketURI = "wss://rinkeby.infura.io/ws/v3/a146daf63d93490995823f0910f50118"
         }else{
             endpoint = URL(string:"http://127.0.0.1:7545")!

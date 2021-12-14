@@ -60,7 +60,7 @@ func callContractMethod(method:ContractMethods,parameters:[AnyObject],password:S
                     let call = try tx!.send(password: password!)
                 }else{
                     let call = try tx!.call()
-                    print("project title \(call["0"])")
+                    print(call["0"])
                 }
 
                 seal.resolve(.fulfilled(true))

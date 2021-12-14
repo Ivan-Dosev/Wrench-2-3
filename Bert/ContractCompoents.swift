@@ -1,246 +1,50 @@
-//Works
+// works 2
 //  ContractCompoents.swift
 //  web3Interaction
 //
 //  Created by Mitchell Tucker on 5/14/21.
-//
+//works2
 
 import Foundation
 
 // Methods available within the contract
-enum ContractMethods:String {
+enum ContractMethods:  String {
 
-    case projectContract = "projectContent"
-    case setContract = "setContract"
-    case getProjectTitle = "getProjectTitle"
-    case getPorjectLocation = "getProjectLocation"
-    case getProjectStart = "getProjectStart"
-    case getProjectEnd = "getProjectEnd"
-    case getTeamType = "getTeamType"
+    case projectContract = "store"
+//    case setContract = "setContract"
+    case getProjectTitle = "retrieve"
 }
 
-let contractAddress = "0x12cAf8a83ab8748D2a307D0de71BbD45a0461440"
+let contractAddress = "0x550434D6bd42CAfF4F4c6A6Cbe4e6bA5C65D4D86"
 
 let contractABI =
     """
-    [ {"constant": true,
-          "inputs": [],
-          "name": "projectEnd",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "projectLocation",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "projectStart",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "projectTitle",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "teamType",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": false,
-          "inputs": [
-            {
-              "internalType": "string",
-              "name": "initialProjectTitle",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "initialProjectLocation",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "initialProjectStart",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "initialProjectEnd",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "initialTeamType",
-              "type": "string"
-            }
-          ],
-          "name": "projectContent",
-          "outputs": [],
-          "payable": false,
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "constant": false,
-          "inputs": [
-            {
-              "internalType": "string",
-              "name": "newProjectTitle",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "newProjectLocation",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "newProjectStart",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "newProjectEnd",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "newTeamType",
-              "type": "string"
-            }
-          ],
-          "name": "setContract",
-          "outputs": [],
-          "payable": false,
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "getProjectTitle",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "getProjectLocation",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "getProjectStart",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "getProjectEnd",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [],
-          "name": "getTeamType",
-          "outputs": [
-            {
-              "internalType": "string",
-              "name": "",
-              "type": "string"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        }
-      ]
+ [
+     {
+         "inputs": [],
+         "name": "retrieve",
+         "outputs": [
+             {
+                 "internalType": "string",
+                 "name": "",
+                 "type": "string"
+             }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+     },
+     {
+         "inputs": [
+             {
+                 "internalType": "string",
+                 "name": "num",
+                 "type": "string"
+             }
+         ],
+         "name": "store",
+         "outputs": [],
+         "stateMutability": "nonpayable",
+         "type": "function"
+     }
+ ]
 """

@@ -7,31 +7,71 @@
 
 import Foundation
 import FirebaseFirestore
+import Combine
+import SwiftUI
 
-struct Book: Identifiable {
-    var id: String = UUID().uuidString
-    var title: String
-    var author: String
-}
 
-class BooksViewModel: ObservableObject {
-    @Published var books = [Book]()
-    private var db = Firestore.firestore()
+class KluchViewMosel : ObservableObject{
     
-    func fetchData() {
+    @Published var sendKluch : String = ""
+    @Published var text      : String = ""
+    @Published var isSendData : Bool = false
+    private var cancellabes = Set<AnyCancellable>()
+    
+    @Published var name : String =  ""
+    @Published var description : String = ""
+    @Published var registerText : String = ""
+    
+    
+    init() {
+        setupData()
+        registration()
+    }
+    
+  private  func setupData(){
         
-        db.collection("book").addSnapshotListener { (querySnapshot , error) in
-            guard let document = querySnapshot?.documents else {
-                return
-            }
-            self.books = document.map { queryDocumentSnapShot -> Book in
-                let data = queryDocumentSnapShot.data()
+        $sendKluch
+            .debounce(for: .seconds(1) , scheduler: DispatchQueue.main)
+            .sink { [weak self] returneddata in
                 
-                let title = data["title"] as? String ?? ""
-                let author = data["author"] as? String ?? ""
-                return Book(title: title, author: author)
+                if !returneddata.isEmpty {
+                    print(">>>>>>>>\(returneddata)")
+                    //+ (self!.name == "" ? "name: unknown, " : "name: \(self!.name), ")  + (self!.description == "" ? "description: unknown, " : "description: \(self!.description). ")
+                    self?.text = returneddata + " Force, "
+                    self?.sendKluch = ""
+                    withAnimation(.linear(duration: 2.0)){
+                        self?.isSendData = true
+                    }
+                  
+                }
+
             }
-        }
+            .store(in: &cancellabes)
         
+    }
+    private func registration(){
+        
+        $name
+            .debounce(for: .seconds(0.4) , scheduler: DispatchQueue.main)
+            .sink { returneddata in
+                if returneddata.count > 20 {
+                    UIApplication.shared.endEditing()
+                }
+            }
+            .store(in: &cancellabes)
+        $description
+            .debounce(for: .seconds(0.4) , scheduler: DispatchQueue.main)
+            .sink { returneddata in
+                if returneddata.count > 20 {
+                    UIApplication.shared.endEditing()
+                }
+            }
+            .store(in: &cancellabes)
+        
+    }
+    
+    func clearText() {
+                        self.text = ""
+                        self.sendKluch = ""
     }
 }

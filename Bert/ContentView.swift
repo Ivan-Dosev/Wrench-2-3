@@ -1,3 +1,11 @@
+//
+//  ContentView.swift
+//  wrench
+//
+//  Created by Ivan Dimitrov on 9.12.21.
+//
+
+import SwiftUI
 
 import SwiftUI
 import web3swift
@@ -9,8 +17,8 @@ import FirebaseStorageSwift
 import Combine
 import CryptoKit
 
-
 var contract:ProjectContract?
+
 var web3:web3?
 var network:Network = .rinkeby
 var wallet:Wallet?
@@ -19,316 +27,318 @@ var password = "dakata_7b" // leave empty string for ganache
 
 struct ContentView: View {
     
-//    @ObservedObject private var model = BooksViewModel()
-    @ObservedObject var models = CountryRepository()
-    @State var company : String = ""
-    @State var medicine: String = ""
-    @State var location = Locale.current
-    @State var onSelect : Bool = false
-    
-    @State var isShow : Bool = false
-    @State var scanningText : String = ""
-    @State var isMedic : Medic?
-    @State private var  documentURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/fir-todo2-4d9ab.appspot.com/o/Color.pdf?alt=media&token=25e021f4-842f-4a29-8796-ef2fae19587c")
+    @State private var text = "The data obtained will be written to:"
+    @State private var eteryum: [String] = "Ethereum".map{ String($0)}
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State private var couner = 0
+    @State private var sendedText : String = ""
+    @State private var isSend :  Bool = false
 
+    @State private var projectTitle: String = ""
     
+    @StateObject var kluchViewMosel = KluchViewMosel()
+    @State private var screenWidth = UIScreen.main.bounds.width
+    @State private var screenHeight =  UIScreen.main.bounds.height * 0.8
+    @State private var SelectButton : Bool = true
+   
+   
+
     var body: some View {
+        ZStack {
+            Color.white.opacity(0.5)
+                .ignoresSafeArea()
+            VStack(spacing: 0) {
 
+                VStack {
+                    
+                    if SelectButton {
+                        Registration
+                            .frame(width: screenWidth, height: screenHeight)
+                            .transition(.move(edge: .trailing))
+                    }
+                    else{
+                        WorkingArray
+                            .frame(width: screenWidth, height: screenHeight)
+                            .transition(.move(edge: .leading))
+                    }
+                }
+              
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation(.linear(duration: 1)){
+                            self.SelectButton = true
+                        }
+                    }) {
+                        HStack{
+                            Text("💿")
+                            
+                            Text("Register")
+                        }
+                        .padding()
+                        .font(.system(size: 24))
+                        .foregroundColor(Color("GreenLogo"))
+                        
+                    }
+                    Spacer()
+                    Button(action: {
+                        withAnimation(.linear(duration: 1)){
+                            self.SelectButton = false
+                        }
+                    }) {
+                        HStack{
+                            Text("🔧")
+                            
+                            Text("Work  ")
+                        }
+                        .padding()
+                        .font(.system(size: 24))
+                        .foregroundColor(Color("GreenLogo"))
+                        
+                       
+                    }
+                    Spacer()
+                }
+
+            }
+        }
+}
+
+  
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+
+extension ContentView {
+    
+    
+    
+    
+    private var WorkingArray : some View {
         
         ZStack {
-            Image("qr_image")
-                .resizable()
-                .scaledToFit()
-                .opacity(0.2)
-                .scaleEffect(1.5)
-                .edgesIgnoringSafeArea(.all)
-            Text("\(self.documentURL!.relativeString)")
-                .foregroundColor(.clear)
-                .onChange(of: documentURL!.relativeString) { _ in
-                    self.isMedic = .pdfAction
-                }
-            Text("Scanner goes here...\n\(self.scanningText)")
-                .foregroundColor(.clear)
-                .onChange(of: scanningText) { _ in
-                    let elements = self.scanningText.components(separatedBy: "/")
-                    self.company = elements[0]
-                    self.medicine = elements[1]
-                }
-            Text("company...\(self.medicine)")
-                .foregroundColor(.clear)
-                .onChange(of: medicine) { _ in
-                    self.models.loadCountry(company: self.company, medicine: self.medicine)
-                }
-                .foregroundColor(.red)
-            
-            VStack(alignment: .center) {
-                
-                VStack(alignment: .center){
-                    Text("HackZurich 2021")
-                        .font(.system(size: 27))
-//                    Text(location.regionCode!)
-
-                }
-                .frame(width: UIScreen.main.bounds.width * 1.2 , height: 110)
-                .modifier(PrimaryButton())
-                .edgesIgnoringSafeArea(.top)
-//                .onChange(of: scanningText) { _ in
-//                    self.documentURL = NSURL(string: scanningText)
-//                    isMedic = .pdfAction
-//                }
-                
-//  MARK: - Buttons
-                
-                HStack{
-                    
-                    Button(action: {
-                        // Create wallet using either a private key or mnemonic
-                        wallet = getWallet(password: password, privateKey: "0b595c19b612180c8d0ebd015ed7c691e82dcfdeadf1733fa561ec2994a4be21", walletName:"metamask")
-                        
-                        // Create contract with wallet as the sender
-                        contract = ProjectContract(wallet: wallet!)
-                        
-                        // Call contract method
-                        // createNewProject()
-                        saveToFB(manifacturer: "BAYER", medicine: "Aspirin-protect", fileName: "famotidine", country: "Cuba", flag: "🇨🇺")
-                        getProjectTitle()
-                        
-                     
-                        
-                    }) {
-                       Text("🐱")
-                            .font(.largeTitle)
-                            .foregroundColor(.orange)
-                    }.offset(x: -20)
-                   
-                    Button(action: {
-                        // Create wallet using either a private key or mnemonic
-                        wallet = getWallet(password: password, privateKey: "0b595c19b612180c8d0ebd015ed7c691e82dcfdeadf1733fa561ec2994a4be21", walletName:"metamask")
-                        // Create contract with wallet as the sender
-                        contract = ProjectContract(wallet: wallet!)
-                        // Call contract method
-                       // createNewProject()
-                        saveToFireBase()
-                        getProjectTitle()
-                    }) {
-                        Image(systemName: "paperplane.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.orange)
-                    }.offset(x: 20)
-                    
-                }
-                ZStack {
-                    VStack(alignment: .center, spacing: 20){
-                        ForEach(models.models) { model in
-                            HStack{
-                                Button(action: {
-                                    self.onSelect = true
-                                        let stringUrl = models.getURL(model: model)
-                                    if stringUrl == self.documentURL?.relativeString {
-                                        self.isMedic = .pdfAction
-                                    }else{
-                                        
-                                        self.documentURL = NSURL(string: models.getURL(model: model))
-                                    }
-                                        let data = NSData(contentsOf: NSURL(string: stringUrl) as! URL)
-                                        let hashedValue = SHA256.hash(data: data! )
-//                                    трябва да се проверъ hashedValue с този от Етхериум и тогажа да се присвои  self.documentURL
-//                                    в противен слуцхеи Алерт
-                      
-                                  
-                                }) {
-                                    HStack{
-                                        Text(model.flag)
-                                            .scaleEffect(2)
-                                        Spacer()
-                                        Text(model.country)
-                                            .font(.system(size: 12))
-                                    }
-
-
-                                }
-                                .padding(.horizontal, 20)
-                                .frame(width: 200, height: 40, alignment: .center)
-                                .modifier(PrimaryButton())
-
-                            }
-
-                        }
-                    }
-                    if onSelect {
-                        ShadowedProgressViews()
-                    }
-                }
-//  MARK: - Scanar
-                
+            Color.white.opacity(0.5)
+                .ignoresSafeArea()
+            VStack{
                 Spacer()
-                Button(action: {
-                    isShow = true
-                    isMedic = .scanningAction
-
-                }) {
-                    Text("start scanning")
-                        .font(.system(size: 27))
-                        .frame(width: UIScreen.main.bounds.width / 1.2 , height: 100)
-                        .modifier(PrimaryButton())
+                logoTitle
+                Spacer()
+                if !self.kluchViewMosel.isSendData {
+                    stackImage
+                        .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                }else{
+                    stackText
+                        .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                }
+                Spacer()
+            }
+        }
+        .onChange(of:kluchViewMosel.text, perform: { kluch in
+            print(">>>>>\(kluch)")
+                    self.projectTitle = kluch
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                if kluchViewMosel.sendKluch == "" && !projectTitle.isEmpty {
+                    self.projectTitle = self.projectTitle +  (kluchViewMosel.name == "" ? "name: unknown, " : "name: \(kluchViewMosel.name), ")  + (kluchViewMosel.description == "" ? "description: unknown, " : "description: \(kluchViewMosel.description). ")
+                    saveToEt()
+                    print(">>>>>>>>>>>>> \(projectTitle) >>>>>>>>>>>>>>>>>>")
                 }
             }
-            
-
-                
-//                Spacer()
-//                Button(action: {
-//                    // Create wallet using either a private key or mnemonic
-//                    wallet = getWallet(password: password, privateKey: "0b595c19b612180c8d0ebd015ed7c691e82dcfdeadf1733fa561ec2994a4be21", walletName:"metamask")
-//                    // Create contract with wallet as the sender
-//                    contract = ProjectContract(wallet: wallet!)
-//                    // Call contract method
-//                    createNewProject()
-//                    getProjectTitle()
-//                }) {
-//                    Image(systemName: "paperplane.fill")
-//                        .font(.largeTitle)
-//                        .foregroundColor(.orange)
-//                }
-         
-        }
-       
-        .sheet(item: $isMedic)  { medic in
-            switch medic {
-            case .scanningAction:  ScannerView( scanningText: $scanningText)
-            case .pdfAction: PDFKitView(url: documentURL! as URL).onAppear(){onSelect = false}
-            case .firebase: EmptyView()
+        })
+        .onReceive(timer, perform: { _ in
+            withAnimation(.spring()){
+                let lastIndex = eteryum.count - 1
+                if couner == lastIndex{
+                    couner = 0
+                }else{
+                    couner += 1
+                }
             }
-        }
-
-//        .onAppear(){
-//            self.models.loadCountry(company: self.company, medicine: self.medicine)
-//        }
-
+        })
+        
     }
     
-//    func loadUrlFromFirebase() {
-//        let fileRef     = Storage.storage().reference().child("nebilet.pdf")
-//        fileRef.downloadURL {( url , err ) in
-//            if let downloadUrl = url {
-//                self.documentURL = NSURL(string: scanningText)
-//            }
-//        }
-//    }
-    
-    func saveToFB(manifacturer: String, medicine: String, fileName: String, country: String, flag: String) {
-        
-        let path = Bundle.main.path(forResource: fileName, ofType: "pdf")
-        let filePathURL = URL(fileURLWithPath: path!)
-        let fileREF = Storage.storage().reference().child("\(manifacturer)/\(fileName)")
-        
-        do{
-            let _ = try! fileREF.putFile( from: filePathURL , metadata: nil) { (metadata , error ) in
-                
-                guard let metadata = metadata else {
-                    print("error metadada ...\n \(error?.localizedDescription)")
-                    return
-                }
-                let size = metadata.size
-                DispatchQueue.main.async { [self] in
-                    fileREF.downloadURL{ (url , err) in
-                        guard let downloadURL = url else {
-                            print("error >>:: \(err?.localizedDescription)")
-                            return
-                        }
-                        do{
-                            let data = try  NSData(contentsOf: downloadURL)
-                       
-                            let hashedValue = SHA256.hash(data: data! )
-                            print("Hashed Value: \(hashedValue)")
-                            createNewProject( hashedValue: hashedValue, downloadURL: downloadURL.relativeString)
-                        }catch{ print("no  > Hashed Value")}
+    private var Registration : some View {
+        ZStack {
+            Color.white.opacity(0.5)
+                .ignoresSafeArea()
+            VStack{
+                Image("BCRL")
+                    .resizable()
+                    .frame(width: screenWidth, height: 200)
+                Section{
+                    HStack(spacing: 0){
+                        TextField("Name ... ", text: $kluchViewMosel.name )
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 5).stroke(Color("ArdaColor") ,style: StrokeStyle(lineWidth: 2)))
+                            .padding()
+                        Spacer()
                         
-                        saveModelToFB(manifacturer: manifacturer, medicine:  medicine, downloadURL: downloadURL.relativeString, country: country, flag: flag)
-                    }
-                }
-                
-            }
-            
-        }catch{
-            
-        }
-    }
-    
-    
-    
-    func saveModelToFB(manifacturer: String, medicine: String, downloadURL: String,  country: String, flag: String){
-        
-        let moselToSave = Country(country: country, flag: flag, urlToFile: downloadURL, name: medicine)
-        let db = Firestore.firestore()
-        
-        do{
-            let _ = try db.collection("\(manifacturer)").addDocument(from: moselToSave)
-            
-        }catch{
-            print("No saved to Firestore.firestore()")
-        }
-    }
-    
-    
-    
-    func saveToFireBase(){
-        
-        let filename = "QRV"
-        let filePath    = Bundle.main.url(forResource: filename, withExtension: "pdf")
-        let fpath = Bundle.main.path(forResource: filename, ofType: "pdf")
-        
-        let filePathURL = URL(fileURLWithPath: fpath!)
-
-        let fileRef     = Storage.storage().reference().child("ether/pdf")
-        print("\(filePath)")
-        do{
-            let _ = try! fileRef.putFile( from: filePathURL , metadata: nil) { (metadata , error ) in
-
-                guard let metadata = metadata else {
-                    print("error 🇫🇷metadada ...\n \(error?.localizedDescription)")
-                    return
-                }
-                let size = metadata.size
-
-                DispatchQueue.main.async { [self] in
-                    fileRef.downloadURL{( url , err ) in
-                        guard let downloadURL = url else {
-                            print("error .. >> url")
-                            return
+                        Button(action: {
+                            UIApplication.shared.endEditing()
+                            kluchViewMosel.name = ""
+                        }) {
+                            
+                            Text(kluchViewMosel.name == "" ? "" :  "⌫")
+                            
+                                .font(.system(size: 32))
+                                .foregroundColor(Color("GreenLogo"))
                         }
-                        print("url >> \(downloadURL.relativeString)")
-                        do{
-                            let data = try  NSData(contentsOf: downloadURL)
-                            print("data:>\(data)")
-                            let hashedValue = SHA256.hash(data: data! )
-                            print("Hashed Value: \(hashedValue)")
-                            createNewProject( hashedValue: hashedValue, downloadURL: downloadURL.relativeString)
-                        }catch{ print("no  > Hashed Value")}
+                        .frame(width: 40, height: 40, alignment: .leading)
+                        .padding(.vertical, 15.0)
+                    }
 
+                    HStack(spacing: 0) {
+                        TextField("Description ...", text: $kluchViewMosel.description)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 5).stroke(Color("ArdaColor") ,style: StrokeStyle(lineWidth: 2)))
+                            .padding()
+                        Spacer()
+                        Button(action: {
+                            UIApplication.shared.endEditing()
+                            kluchViewMosel.description = ""
+                        }) {
+                            
+                            Text(kluchViewMosel.description == "" ? "" :  "⌫")
+                            
+                                .font(.system(size: 32))
+                                .foregroundColor(Color("GreenLogo"))
+                        }
+                        .frame(width: 40, height: 40, alignment: .leading)
+                        .padding(.vertical, 15.0)
                     }
                 }
-                
-
+                Spacer()
             }
-        }
-        catch {
-            print("error putData ...")
+           
         }
     }
-
-    func createNewProject( hashedValue: SHA256.Digest, downloadURL: String) {
+    
+    
+    private var logoTitle : some View {
         
-        let projectTitle = "HouseSiding"
-        let projectLocation = "299 Race Ave. Dacula, GA 30019"
-        let projectStart = "\(downloadURL)"
-        let projectEnd = "\(hashedValue)"
-        let teamType = "Collaboration"
+        VStack{
+            Text(text)
+                .foregroundColor(Color("GreenLogo"))
+            HStack{
+                ForEach(eteryum.indices) { index in
+                    Text(eteryum[index])
+                        .font(.headline)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("GreenLogo"))
+                        .offset(y: couner == index ? 10 : 0)
+                }
+            }
+            .offset(y: 10)
+        }
+    }
+    
+    private var  stackImage :  some View {
+        
+        ZStack(alignment: .bottom) {
+            Image("kluch")
+                .scaleEffect()
+                .frame(width: UIScreen.main.bounds.width * 0.8)
+            
+            HStack(alignment: .bottom){
+                TextField(" Waiting ...", text: $kluchViewMosel.sendKluch)
+                    .padding(.vertical,6)
+                    .background(Color.white)
+                    .background(RoundedRectangle(cornerRadius: 1).stroke(Color("ArdaColor") ,style: StrokeStyle(lineWidth: 3)))
+            }
+            .frame( height: 70, alignment: .center)
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray).padding(.top, 15))
+            .padding(.horizontal)
+            
+                
+        }
+       .frame(width: UIScreen.main.bounds.width)
+       
+        .background( RoundedRectangle(cornerRadius: 10).fill(Color.gray).padding(.horizontal, 8))
+    }
+    
+    private var  stackText :  some View {
+        ZStack {
+            HStack{
+                VStack(spacing: 0){
+                   Text("The data is being send ....")
+                        .foregroundColor(Color("GreenLogo"))
+                        .font(.caption)
+                        .multilineTextAlignment(.trailing)
+                    VStack(spacing: 0){
+                        Text(kluchViewMosel.text)
+                        Text(kluchViewMosel.name == ""  ? " unknown " : kluchViewMosel.name)
+                        Text(kluchViewMosel.description == "" ? " unknown " : kluchViewMosel.description)
+                    }
+                    .font(.system(size: 14))
+                    .foregroundColor(Color("ArdaColor"))
+                    .multilineTextAlignment(.leading)
+                    
+                    Text("please wait ...")
+                        .foregroundColor(Color("GreenLogo"))
+                        .font(.caption)
+                        .multilineTextAlignment(.trailing)
+                }
+           
+                ProgressView()
+                    .scaleEffect(2)
+                    .padding(.horizontal, 30)
+                
+            }
 
-        let parameters = [projectTitle,projectLocation,projectStart,projectEnd,teamType] as [AnyObject]
+        }
+        .frame(width: UIScreen.main.bounds.width, height: 130)
+        .background( RoundedRectangle(cornerRadius: 10)
+                        .stroke(lineWidth: 3)
+                    .fill(Color.gray) .padding(.horizontal, 8))
+                       
+       
+    }
+    
+
+    
+    private var addClear : some View {
+        VStack{
+            Text( kluchViewMosel.isSendData ? " The data\n \(kluchViewMosel.text) \nsend to Eteriyum " : "enter data ...." )
+                .padding()
+                .font(.system(size: 21))
+                .foregroundColor(.red.opacity(0.8))
+            
+                .onChange(of:kluchViewMosel.text, perform: { kluch in
+                    
+                    print(">>>>>\(kluch)")
+
+                            self.projectTitle = kluch
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        if kluchViewMosel.sendKluch == "" && !projectTitle.isEmpty {
+                            saveToEt()
+                            print(">>>>>>>>>>>>> \(projectTitle) >>>>>>>>>>>>>>>>>>")
+                        }
+                    }
+                })
+        }
+    }
+    
+    func saveToEt(){
+        wallet = getWallet(password: password, privateKey: "0b595c19b612180c8d0ebd015ed7c691e82dcfdeadf1733fa561ec2994a4be21", walletName:"GanacheWallet")
+        // Create contract with wallet as the sender
+        contract = ProjectContract(wallet: wallet!)
+        // Call contract method
+        createNewProject()
+    }
+    
+
+    func createNewProject() {
+        let parameters = [projectTitle] as [AnyObject]
         firstly {
             // Call contract method
             callContractMethod(method: .projectContract, parameters: parameters,password: "dakata_7b")
+//            callContractMethod(method: ContractMethods(rawValue: "store")!, parameters: [3] as [AnyObject], password: "dakata_7b")
         }.done { response in
             // print out response
             print("createNewProject response \(response)")
@@ -341,26 +351,25 @@ struct ContentView: View {
         let parameters = [] as [AnyObject]
         firstly {
             // Call contract method
-            callContractMethod(method: .getProjectEnd, parameters: parameters,password: nil)
+//            callContractMethod(method: .getProjectTitle, parameters: parameters,password: nil)
+            callContractMethod(method: .getProjectTitle, parameters: parameters,password: nil)
         }.done { response in
             // print out response
-            print("getProjectTitle response \(response)")
+            print("getProjectTitle response \(response) arda")
+            withAnimation(.linear(duration: 1)) {
+                self.kluchViewMosel.isSendData = false
+            }
+          
+            self.kluchViewMosel.clearText()
+            
         }
     }
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+extension UIApplication {
+    
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
-
-struct ContentView_LibraryContent: LibraryContentProvider {
-    var views: [LibraryItem] {
-        LibraryItem(/*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/)
-    }
-}
-
-
-

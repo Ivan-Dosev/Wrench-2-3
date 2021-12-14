@@ -44,6 +44,12 @@ struct BertApp: App {
     
 //    let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    init(){
+     //   UITextField.appearance().backgroundColor = UIColor.init(named: "ArdaColor")
+        UITextField.appearance().backgroundColor = UIColor.clear
+ 
+    }
+  
     
     var body: some Scene {
         WindowGroup {

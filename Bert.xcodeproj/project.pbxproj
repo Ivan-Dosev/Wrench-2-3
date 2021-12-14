@@ -22,16 +22,6 @@
 		CC48B38A26B5F6F7009A607C /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B38926B5F6F7009A607C /* Networks.swift */; };
 		CC48B38F26B5F700009A607C /* ContractHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48B38E26B5F700009A607C /* ContractHelpers.swift */; };
 		CC898EC826B84ABA003D36AA /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC898EC726B84ABA003D36AA /* CryptoSwift */; };
-		CC8E59AC26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
-		CC8E59AD26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
-		CC8E59AE26F0263B006E6C5D /* Azithromycin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */; };
-		CC8E59AF26F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
-		CC8E59B026F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
-		CC8E59B126F0263B006E6C5D /* nebilet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AA26F0263B006E6C5D /* nebilet.pdf */; };
-		CC8E59B226F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
-		CC8E59B326F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
-		CC8E59B426F0263B006E6C5D /* famotidine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC8E59AB26F0263B006E6C5D /* famotidine.pdf */; };
-		CC8E59B626F305D6006E6C5D /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E59B526F305D6006E6C5D /* FirebaseView.swift */; };
 		CCB3C26D26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C26C26EEF69C0055F010 /* FirebaseFirestoreSwift-Beta */; };
 		CCB3C26F26EEF69C0055F010 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C26E26EEF69C0055F010 /* FirebaseStorage */; };
 		CCB3C27126EEF69C0055F010 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCB3C27026EEF69C0055F010 /* FirebaseAuth */; };
@@ -43,21 +33,6 @@
 		CCB3C27B26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
 		CCB3C27C26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
 		CCB3C27D26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
-		CCB3C28026EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
-		CCB3C28126EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
-		CCB3C28226EF09B70055F010 /* QRV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27F26EF09B70055F010 /* QRV.pdf */; };
-		CCB3C28426EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
-		CCB3C28526EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
-		CCB3C28626EF09CB0055F010 /* PdfColor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C28326EF09CB0055F010 /* PdfColor.pdf */; };
-		CCB3C28826EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
-		CCB3C28926EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
-		CCB3C28A26EF09DF0055F010 /* QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28726EF09DF0055F010 /* QQ.swift */; };
-		CCB3C28C26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
-		CCB3C28D26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
-		CCB3C28E26EF09EB0055F010 /* PdfKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28B26EF09EB0055F010 /* PdfKit.swift */; };
-		CCB3C29026EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
-		CCB3C29126EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
-		CCB3C29226EF0A3A0055F010 /* EnumMedic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */; };
 		E59BBBC025FC51AF3CF60EE8 /* Pods_BertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2ADF89C56488772F315D8 /* Pods_BertTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,17 +78,8 @@
 		CC48B38426B5F6E6009A607C /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		CC48B38926B5F6F7009A607C /* Networks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networks.swift; sourceTree = "<group>"; };
 		CC48B38E26B5F700009A607C /* ContractHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractHelpers.swift; sourceTree = "<group>"; };
-		CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Azithromycin.pdf; path = ../../../../../qr/Azithromycin.pdf; sourceTree = "<group>"; };
-		CC8E59AA26F0263B006E6C5D /* nebilet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = nebilet.pdf; sourceTree = "<group>"; };
-		CC8E59AB26F0263B006E6C5D /* famotidine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = famotidine.pdf; sourceTree = "<group>"; };
-		CC8E59B526F305D6006E6C5D /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
 		CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCB3C27A26EF026A0055F010 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		CCB3C27F26EF09B70055F010 /* QRV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QRV.pdf; sourceTree = "<group>"; };
-		CCB3C28326EF09CB0055F010 /* PdfColor.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PdfColor.pdf; sourceTree = "<group>"; };
-		CCB3C28726EF09DF0055F010 /* QQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQ.swift; sourceTree = "<group>"; };
-		CCB3C28B26EF09EB0055F010 /* PdfKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfKit.swift; sourceTree = "<group>"; };
-		CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumMedic.swift; sourceTree = "<group>"; };
 		EBB6084E40E2B40423DFBD0C /* Pods_Bert_BertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bert_BertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25AF1F9F11957834FDA95AD /* Pods-Bert-BertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert-BertUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,8 +175,6 @@
 				CC48B38E26B5F700009A607C /* ContractHelpers.swift */,
 				CC48B21B26B427F7009A607C /* ContentView.swift */,
 				CCB3C27A26EF026A0055F010 /* Book.swift */,
-				CCB3C27F26EF09B70055F010 /* QRV.pdf */,
-				CCB3C27E26EF099A0055F010 /* Dossi */,
 				CC48B21D26B427FA009A607C /* Assets.xcassets */,
 				CC48B22226B427FA009A607C /* Info.plist */,
 				CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */,
@@ -243,29 +207,6 @@
 				CC48B23826B427FA009A607C /* Info.plist */,
 			);
 			path = BertUITests;
-			sourceTree = "<group>";
-		};
-		CC8E59A726F0245B006E6C5D /* PDFfiles */ = {
-			isa = PBXGroup;
-			children = (
-				CC8E59A926F0263B006E6C5D /* Azithromycin.pdf */,
-				CC8E59AB26F0263B006E6C5D /* famotidine.pdf */,
-				CC8E59AA26F0263B006E6C5D /* nebilet.pdf */,
-				CCB3C28326EF09CB0055F010 /* PdfColor.pdf */,
-			);
-			path = PDFfiles;
-			sourceTree = "<group>";
-		};
-		CCB3C27E26EF099A0055F010 /* Dossi */ = {
-			isa = PBXGroup;
-			children = (
-				CCB3C28B26EF09EB0055F010 /* PdfKit.swift */,
-				CC8E59B526F305D6006E6C5D /* FirebaseView.swift */,
-				CCB3C28F26EF0A3A0055F010 /* EnumMedic.swift */,
-				CCB3C28726EF09DF0055F010 /* QQ.swift */,
-				CC8E59A726F0245B006E6C5D /* PDFfiles */,
-			);
-			path = Dossi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,13 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB3C28026EF09B70055F010 /* QRV.pdf in Resources */,
 				CC48B22126B427FA009A607C /* Preview Assets.xcassets in Resources */,
-				CCB3C28426EF09CB0055F010 /* PdfColor.pdf in Resources */,
-				CC8E59AC26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
 				CCB3C27726EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
-				CC8E59AF26F0263B006E6C5D /* nebilet.pdf in Resources */,
-				CC8E59B226F0263B006E6C5D /* famotidine.pdf in Resources */,
 				CC48B21E26B427FA009A607C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,11 +342,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8E59B026F0263B006E6C5D /* nebilet.pdf in Resources */,
-				CCB3C28126EF09B70055F010 /* QRV.pdf in Resources */,
-				CC8E59AD26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
-				CCB3C28526EF09CB0055F010 /* PdfColor.pdf in Resources */,
-				CC8E59B326F0263B006E6C5D /* famotidine.pdf in Resources */,
 				CCB3C27826EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,11 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8E59B126F0263B006E6C5D /* nebilet.pdf in Resources */,
-				CCB3C28226EF09B70055F010 /* QRV.pdf in Resources */,
-				CC8E59AE26F0263B006E6C5D /* Azithromycin.pdf in Resources */,
-				CCB3C28626EF09CB0055F010 /* PdfColor.pdf in Resources */,
-				CC8E59B426F0263B006E6C5D /* famotidine.pdf in Resources */,
 				CCB3C27926EEF7A80055F010 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,14 +483,10 @@
 			files = (
 				CCB3C27B26EF026A0055F010 /* Book.swift in Sources */,
 				CC48B38526B5F6E6009A607C /* Wallet.swift in Sources */,
-				CCB3C29026EF0A3A0055F010 /* EnumMedic.swift in Sources */,
-				CCB3C28826EF09DF0055F010 /* QQ.swift in Sources */,
 				CC48B38F26B5F700009A607C /* ContractHelpers.swift in Sources */,
-				CC8E59B626F305D6006E6C5D /* FirebaseView.swift in Sources */,
 				CC48B21C26B427F7009A607C /* ContentView.swift in Sources */,
 				CC48B38026B5F6CA009A607C /* ProjectContract.swift in Sources */,
 				CC48B26026B43222009A607C /* ContractCompoents.swift in Sources */,
-				CCB3C28C26EF09EB0055F010 /* PdfKit.swift in Sources */,
 				CC48B38A26B5F6F7009A607C /* Networks.swift in Sources */,
 				CC48B21A26B427F7009A607C /* BertApp.swift in Sources */,
 			);
@@ -575,10 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB3C27C26EF026A0055F010 /* Book.swift in Sources */,
-				CCB3C28D26EF09EB0055F010 /* PdfKit.swift in Sources */,
 				CC48B22C26B427FA009A607C /* BertTests.swift in Sources */,
-				CCB3C29126EF0A3A0055F010 /* EnumMedic.swift in Sources */,
-				CCB3C28926EF09DF0055F010 /* QQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,10 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB3C27D26EF026A0055F010 /* Book.swift in Sources */,
-				CCB3C28E26EF09EB0055F010 /* PdfKit.swift in Sources */,
 				CC48B23726B427FA009A607C /* BertUITests.swift in Sources */,
-				CCB3C29226EF0A3A0055F010 /* EnumMedic.swift in Sources */,
-				CCB3C28A26EF09DF0055F010 /* QQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
