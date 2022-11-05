@@ -27,12 +27,12 @@ public class ProjectContract{
     var socketURI:String?
 
     // MARK: Init
-    init(wallet:Wallet){
+    init(wallet:Wallet, contractString: String){
         // ropsten should look very similar to rinkeby
-        if network == .rinkeby{
-            endpoint = URL(string:"https://rinkeby.infura.io/v3/a146daf63d93490995823f0910f50118")!
-            ethContractAddress = EthereumAddress("0x550434D6bd42CAfF4F4c6A6Cbe4e6bA5C65D4D86", ignoreChecksum: true)!
-            socketURI = "wss://rinkeby.infura.io/ws/v3/a146daf63d93490995823f0910f50118"
+        if network == .goerli{
+            endpoint = URL(string:"https://goerli.infura.io/v3/a146daf63d93490995823f0910f50118")!
+            ethContractAddress = EthereumAddress( contractString, ignoreChecksum: true)!
+            socketURI = "wss://goerli.infura.io/ws/v3/a146daf63d93490995823f0910f50118"
         }else{
             endpoint = URL(string:"http://127.0.0.1:7545")!
             ethContractAddress = EthereumAddress(contractAddress, ignoreChecksum: true)!

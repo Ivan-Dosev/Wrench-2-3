@@ -30,9 +30,9 @@
 		CCB3C27726EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
 		CCB3C27826EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
 		CCB3C27926EEF7A80055F010 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */; };
-		CCB3C27B26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
-		CCB3C27C26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
-		CCB3C27D26EF026A0055F010 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* Book.swift */; };
+		CCB3C27B26EF026A0055F010 /* KluchViewMosel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* KluchViewMosel.swift */; };
+		CCB3C27C26EF026A0055F010 /* KluchViewMosel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* KluchViewMosel.swift */; };
+		CCB3C27D26EF026A0055F010 /* KluchViewMosel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3C27A26EF026A0055F010 /* KluchViewMosel.swift */; };
 		E59BBBC025FC51AF3CF60EE8 /* Pods_BertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2ADF89C56488772F315D8 /* Pods_BertTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 		CC48B38926B5F6F7009A607C /* Networks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networks.swift; sourceTree = "<group>"; };
 		CC48B38E26B5F700009A607C /* ContractHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractHelpers.swift; sourceTree = "<group>"; };
 		CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CCB3C27A26EF026A0055F010 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CCB3C27A26EF026A0055F010 /* KluchViewMosel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KluchViewMosel.swift; sourceTree = "<group>"; };
 		EBB6084E40E2B40423DFBD0C /* Pods_Bert_BertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bert_BertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25AF1F9F11957834FDA95AD /* Pods-Bert-BertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bert-BertUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bert-BertUITests/Pods-Bert-BertUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +174,7 @@
 				CC48B38926B5F6F7009A607C /* Networks.swift */,
 				CC48B38E26B5F700009A607C /* ContractHelpers.swift */,
 				CC48B21B26B427F7009A607C /* ContentView.swift */,
-				CCB3C27A26EF026A0055F010 /* Book.swift */,
+				CCB3C27A26EF026A0055F010 /* KluchViewMosel.swift */,
 				CC48B21D26B427FA009A607C /* Assets.xcassets */,
 				CC48B22226B427FA009A607C /* Info.plist */,
 				CCB3C27626EEF7A80055F010 /* GoogleService-Info.plist */,
@@ -481,7 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB3C27B26EF026A0055F010 /* Book.swift in Sources */,
+				CCB3C27B26EF026A0055F010 /* KluchViewMosel.swift in Sources */,
 				CC48B38526B5F6E6009A607C /* Wallet.swift in Sources */,
 				CC48B38F26B5F700009A607C /* ContractHelpers.swift in Sources */,
 				CC48B21C26B427F7009A607C /* ContentView.swift in Sources */,
@@ -496,7 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB3C27C26EF026A0055F010 /* Book.swift in Sources */,
+				CCB3C27C26EF026A0055F010 /* KluchViewMosel.swift in Sources */,
 				CC48B22C26B427FA009A607C /* BertTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB3C27D26EF026A0055F010 /* Book.swift in Sources */,
+				CCB3C27D26EF026A0055F010 /* KluchViewMosel.swift in Sources */,
 				CC48B23726B427FA009A607C /* BertUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bert/Preview Content\"";
-				DEVELOPMENT_TEAM = 2FYTR3E5Q9;
+				DEVELOPMENT_TEAM = 59D3872DX3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -673,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bert/Preview Content\"";
-				DEVELOPMENT_TEAM = 2FYTR3E5Q9;
+				DEVELOPMENT_TEAM = 59D3872DX3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

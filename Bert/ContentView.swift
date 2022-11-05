@@ -1,7 +1,7 @@
 //
 //  ContentView.swift
 //  wrench
-//
+//111
 //  Created by Ivan Dimitrov on 9.12.21.
 //
 
@@ -20,9 +20,13 @@ import CryptoKit
 var contract:ProjectContract?
 
 var web3:web3?
-var network:Network = .rinkeby
+var network:Network = .goerli
 var wallet:Wallet?
-var password = "dakata_7b" // leave empty string for ganache
+
+var password        = ""
+var privateKey      = ""
+var walletName      = "GanacheWallet"
+var contractAddress = "0x545bf7119FA620C4D269D9b1E8722d15c3b81A7f"
 
 
 struct ContentView: View {
@@ -81,6 +85,9 @@ struct ContentView: View {
                         .foregroundColor(Color("GreenLogo"))
                         
                     }
+                    .background(
+                        !self.SelectButton ?    RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2) : nil
+                    )
                     Spacer()
                     Button(action: {
                         withAnimation(.linear(duration: 1)){
@@ -98,6 +105,9 @@ struct ContentView: View {
                         
                        
                     }
+                    .background(
+                        self.SelectButton ?    RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 2) : nil
+                    )
                     Spacer()
                 }
 
@@ -325,20 +335,20 @@ extension ContentView {
     }
     
     func saveToEt(){
-        wallet = getWallet(password: password, privateKey: "0b595c19b612180c8d0ebd015ed7c691e82dcfdeadf1733fa561ec2994a4be21", walletName:"GanacheWallet")
+        wallet = getWallet(password: password, privateKey: privateKey, walletName: walletName)
         // Create contract with wallet as the sender
-        contract = ProjectContract(wallet: wallet!)
+        contract = ProjectContract(wallet: wallet!, contractString: contractAddress)
         // Call contract method
         createNewProject()
     }
     
 
     func createNewProject() {
+        print("....\(projectTitle)")
         let parameters = [projectTitle] as [AnyObject]
         firstly {
             // Call contract method
-            callContractMethod(method: .projectContract, parameters: parameters,password: "dakata_7b")
-//            callContractMethod(method: ContractMethods(rawValue: "store")!, parameters: [3] as [AnyObject], password: "dakata_7b")
+            callContractMethod(method: .projectContract, parameters: parameters,password: password)
         }.done { response in
             // print out response
             print("createNewProject response \(response)")

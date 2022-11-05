@@ -8,7 +8,7 @@
 import Foundation
 
 enum Network {
-    case rinkeby
+    case goerli
     case ropsten
     case ganache
 }
